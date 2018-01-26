@@ -12,16 +12,16 @@
     <header>
 
         <!-- top bar with logo -->
-        <div class="topBarContainer">
+        <div class="top-bar-flex-container">
             <div class="wrapper">
-                <div class="topBar">
+                <div class="top-bar">
                     <li><i class="fa fa-phone" aria-hidden="true"></i><span class="sr-only">phone icon</span>(541)754 3010</li>
                     <li><i class="fa fa-envelope-o" aria-hidden="true"></i><span class="sr-only">envelope icon</span>contact@gcom vn</li>
                 </div>
-                <div class="topBar logo">
+                <div class="top-bar-logo">
                     <li>Genius</li>
                 </div>
-                <div class="topBar">
+                <div class="top-bar">
                     <li>Register</li>
                     <li>Login</li>
                 </div>
@@ -29,17 +29,19 @@
         </div>
         
         <!-- header nav starts -->
-        <div class="headerNavContainer">
-            <nav class="headerNavBar">
-                <li>Home</li>
-                <li>Pages</li>
-                <li>Courses</li>
-                <li>Features</li>
-                <li>Shop</li>
-                <li>News</li>
-                <li>Events</li>
-                <li><i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="sr-only">shopping cart icon</span></li>
-                <li><i class="fa fa-search" aria-hidden="true"></i><span class="sr-only">search icon</span></li>
+        <div class="header-nav-flex-container">
+            <nav class="header-nav-bar">
+                <ul>
+                    <li>Home</li>
+                    <li>Pages</li>
+                    <li>Courses</li>
+                    <li>Features</li>
+                    <li>Shop</li>
+                    <li>News</li>
+                    <li>Events</li>
+                    <li><i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="sr-only">shopping cart icon</span></li>
+                    <li><i class="fa fa-search" aria-hidden="true"></i><span class="sr-only">search icon</span></li>
+                </ul>
             </nav>
         </div>
 
@@ -55,33 +57,36 @@
     <!-- main starts -->
     <main>
         <!-- courses heading starts -->
-        <section class="coursesContainer">
+        <section class="section-main-course-items wrapper">
             <div>
-                <div class="">
+                <div class="course-items-title">
                     <h2>Touch them if you want</h2>
                     <h1>Trending Courses</h1>
-                    <img src="" alt="">
+                    <img src="./assets/openMagazine.jpg" alt="open book">
                 </div>
                 <!-- courses navigation starts -->
-                <nav class="mainNav">
-                    <li>All</li>
-                    <li>Film</li>
-                    <li>Music</li>
-                    <li>Photography</li>
-                    <li>Design</li>
-                    <li>Business</li>
+                <nav class="course-items-flex-nav">
+                    <ul>
+                        <li>All</li>
+                        <li>Film</li>
+                        <li>Music</li>
+                        <li>Photography</li>
+                        <li>Design</li>
+                        <li>Business</li>
+                    </ul>
                 </nav>
             </div>
+
             <!-- courses items start -->
 
-            <!-- courses item one -->
-            <div class="coursesItems wrapper">
-                <div class="coursesItemsContainer">
-                    <img class="coursesItemPhoto" src="./assets/book.jpg" alt="person reading book by the water">
+            <!-- courses item one starts -->
+            <div class="main-course-items-flex-container">
+                <div class="main-courses-items">
+                    <img class="courses-items-photo" src="./assets/book.jpg" alt="person reading book by the water">
                     <p>Course in expert bartender and modern cocktail</p>
                     <div>
-                        <img class="profilePhoto" src="" alt="">
-                        <div class="coursesAuthor">
+                        <img class="courses-profile-photo" src="" alt="">
+                        <div class="courses-author">
                             <p>Clive Bradley</p>
                             <p>View Profile</p>
                         </div>
@@ -96,12 +101,12 @@
                 </div>
 
                 <!-- courses item two starts -->
-                <div class="coursesItemsContainer">
-                    <img class="coursesItemPhoto" src="./assets/book.jpg" alt="">
+                <div class="main-courses-items">
+                    <img class="courses-item-photo" src="./assets/library.jpg" alt="books in library">
                     <p>Fashion styling and photography course</p>
                     <div>
-                        <img class="profilePhoto" src="" alt="">
-                        <div class="coursesAuthor">
+                        <img class="profile-photo" src="" alt="">
+                        <div class="courses-author">
                             <p>Cedric Chapman</p>
                             <p>View Profile</p>
                         </div>
@@ -109,11 +114,11 @@
                             <div>
                                 <li>
                                     <i class="fa fa-users" aria-hidden="true"></i>
-                                    <span class="sr-only">users icon</span>
+                                    <span class="sr-only">users icon</span>75
                                 </li>
                                 <li>
                                     <i class="fa fa-comments" aria-hidden="true"></i>
-                                    <span class="sr-only">comments icon</span>
+                                    <span class="sr-only">comments icon</span>24
                                 </li>
                             </div>
                             <p>Free</p>
@@ -122,12 +127,12 @@
                 </div>
 
                 <!-- courses item three starts -->
-                <div class="coursesItemsContainer">
-                    <img class="coursesItemPhoto" src="./assets/book.jpg" alt="">
-                    <p>Course in expert bartender and modern cocktail</p>
+                <div class="main-items">
+                    <img class="courses-item-photo" src="./assets/penPaper.jpg" alt="pen and paper">
+                    <p>Management development programme</p>
                     <div>
-                        <img class="profilePhoto" src="" alt="">
-                        <div class="coursesAuthor">
+                        <img class="profile-photo" src="" alt="">
+                        <div class="courses-author">
                             <p>Chad Cecil</p>
                             <p>View Profile</p>
                         </div>
@@ -135,11 +140,11 @@
                             <div>
                                 <li>
                                     <i class="fa fa-users" aria-hidden="true"></i>
-                                    <span class="sr-only">users icon</span>
+                                    <span class="sr-only">users icon</span>75
                                 </li>
                                 <li>
                                     <i class="fa fa-comments" aria-hidden="true"></i>
-                                    <span class="sr-only">comments icon</span>
+                                    <span class="sr-only">comments icon</span>24
                                 </li>
                             </div>
                             <p>Free</p>
@@ -148,24 +153,24 @@
                 </div>
 
                 <!-- courses item four starts -->
-                <div class="coursesItemsContainer">
-                    <img class="coursesItemPhoto" src="./assets/book.jpg" alt="">
-                    <p>Course in expert bartender and modern cocktail</p>
+                <div class="main-courses-items">
+                    <img class="courses-item-photo" src="./assets/reading.jpg" alt="reading newspaper">
+                    <p>Learn english with websites</p>
                     <div>
-                        <img class="profilePhoto" src="" alt="">
-                        <div class="coursesAuthor">
-                            <p>Clive Bradley</p>
+                        <img class="profile-photo" src="" alt="">
+                        <div class="courses-author">
+                            <p>Henry Cary</p>
                             <p>View Profile</p>
                         </div>
                         <div>
                             <div>
                                 <li>
                                     <i class="fa fa-users" aria-hidden="true"></i>
-                                    <span class="sr-only">users icon</span>
+                                    <span class="sr-only">users icon</span>75
                                 </li>
                                 <li>
                                     <i class="fa fa-comments" aria-hidden="true"></i>
-                                    <span class="sr-only">comments icon</span>
+                                    <span class="sr-only">comments icon</span>24
                                 </li>
                             </div>
                             <p>Free</p>
@@ -174,24 +179,24 @@
                 </div>
 
                 <!-- courses item five starts -->
-                <div class="coursesItemsContainer">
-                    <img class="coursesItemPhoto" src="./assets/book.jpg" alt="">
-                    <p>Course in expert bartender and modern cocktail</p>
+                <div class="main-courses-items">
+                    <img class="courses-item-photo" src="./assets/hands.jpg" alt="writing on paper with pen">
+                    <p>Digital graphic design fundamentals</p>
                     <div>
-                        <img class="profilePhoto" src="" alt="">
-                        <div class="coursesAuthor">
-                            <p>Clive Bradley</p>
+                        <img class="profile-photo" src="" alt="">
+                        <div class="courses-author">
+                            <p>Browen Brent</p>
                             <p>View Profile</p>
                         </div>
                         <div>
                             <div>
                                 <li>
                                     <i class="fa fa-users" aria-hidden="true"></i>
-                                    <span class="sr-only">users icon</span>
+                                    <span class="sr-only">users icon</span>75
                                 </li>
                                 <li>
                                     <i class="fa fa-comments" aria-hidden="true"></i>
-                                    <span class="sr-only">comments icon</span>
+                                    <span class="sr-only">comments icon</span>24
                                 </li>
                             </div>
                             <p>Free</p>
@@ -200,24 +205,24 @@
                 </div>
 
                 <!-- courses item six starts -->
-                <div class="coursesItemsContainer">
-                    <img class="coursesItemPhoto" src="./assets/book.jpg" alt="">
-                    <p>Course in expert bartender and modern cocktail</p>
+                <div class="main-courses-items">
+                    <img class="courses-item-photo" src="./assets/bookBead.jpg" alt="reading book on bed">
+                    <p>Fashion and luxury goods management course</p>
                     <div>
-                        <img class="profilePhoto" src="" alt="">
-                        <div class="coursesAuthor">
-                            <p>Clive Bradley</p>
+                        <img class="profile-photo" src="" alt="">
+                        <div class="courses-author">
+                            <p>Bruce Axel</p>
                             <p>View Profile</p>
                         </div>
                         <div>
                             <div>
                                 <li>
                                     <i class="fa fa-users" aria-hidden="true"></i>
-                                    <span class="sr-only">users icon</span>
+                                    <span class="sr-only">users icon</span>75
                                 </li>
                                 <li>
                                     <i class="fa fa-comments" aria-hidden="true"></i>
-                                    <span class="sr-only">comments icon</span>
+                                    <span class="sr-only">comments icon</span>24
                                 </li>
                             </div>
                             <p>Free</p>
@@ -226,24 +231,24 @@
                 </div>
 
                 <!-- courses item seven starts -->
-                <div class="coursesItemsContainer">
-                    <img class="coursesItemPhoto" src="./assets/book.jpg" alt="">
-                    <p>Course in expert bartender and modern cocktail</p>
+                <div class="main-courses-items">
+                    <img class="courses-item-photo" src="./assets/window.jpg" alt="working on computer">
+                    <p>Write professional emails in english</p>
                     <div>
-                        <img class="profilePhoto" src="" alt="">
-                        <div class="coursesAuthor">
-                            <p>Clive Bradley</p>
+                        <img class="profile-photo" src="" alt="">
+                        <div class="courses-author">
+                            <p>Arvel Baird</p>
                             <p>View Profile</p>
                         </div>
                         <div>
                             <div>
                                 <li>
                                     <i class="fa fa-users" aria-hidden="true"></i>
-                                    <span class="sr-only">users icon</span>
+                                    <span class="sr-only">users icon</span>75
                                 </li>
                                 <li>
                                     <i class="fa fa-comments" aria-hidden="true"></i>
-                                    <span class="sr-only">comments icon</span>
+                                    <span class="sr-only">comments icon</span>24
                                 </li>
                             </div>
                             <p>Free</p>
@@ -252,36 +257,71 @@
                 </div>
 
                 <!-- courses item eight starts -->
-                <div class="coursesItemsContainer">
-                    <img class="coursesItemPhoto" src="./assets/book.jpg" alt="">
-                    <p>Course in expert bartender and modern cocktail</p>
+                <div class="main-courses-items">
+                    <img class="courses-item-photo" src="./assets/.jpg" alt="writing on paper outside">
+                    <p>Maseter class - digital acceleration course</p>
                     <div>
-                        <img class="profilePhoto" src="" alt="">
-                        <div class="coursesAuthor">
-                            <p>Clive Bradley</p>
+                        <img class="profile-photo" src="" alt="">
+                        <div class="courses-author">
+                            <p>Aubrey Austin</p>
                             <p>View Profile</p>
                         </div>
                         <div>
                             <div>
                                 <li>
                                     <i class="fa fa-users" aria-hidden="true"></i>
-                                    <span class="sr-only">users icon</span>
+                                    <span class="sr-only">users icon</span>75
                                 </li>
                                 <li>
                                     <i class="fa fa-comments" aria-hidden="true"></i>
-                                    <span class="sr-only">comments icon</span>
+                                    <span class="sr-only">comments icon</span>24
                                 </li>
                             </div>
                             <p>Free</p>
                         </div>
                     </div>
                 </div>
-
-
             </div>
-            
+        </section>
+
+        <!-- main gallery section starts -->
+        <section class="section-main-gallery">
+            <div class="main-gallery wrapper">
+                <div class="main-gallery-title">
+                    <h2>Lorem ipsum dolor</h2>
+                    <h1>See Photo Gallery</h1>
+                    <img src="./assets/openMagazine.jpg" alt="open book">
+                </div>
+                <div class="main-gallery-flex-container">
+                    <div>
+                       <div><img src="./assets/mug.jpg" alt="coffe mug on table"></div>
+                       <div><img src="" alt=""></div>
+                       <div><img src="" alt=""></div>
+                    </div>
+                    <div>
+                        <div><img src="" alt=""></div>
+                        <div><img src="" alt=""></div>
+                        <div><img src="" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- main news section starts -->
+        <section class="section-news-container wrapper">
+            <div class="main-news-container">
+                <div class="main-news-title">
+                    <h2>Lorem ipsum dolor</h2>
+                    <h1>See Photo Gallery</h1>
+                    <img src="./assets/openMagazine.jpg" alt="open book">
+                </div>
+            </div>
 
         </section>
+
+
+
+
     </main>
 
 
