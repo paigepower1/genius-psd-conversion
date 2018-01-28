@@ -131,3 +131,75 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
+
+body {
+  font-family: "Raleway", sans-serif; }
+
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto; }
+
+.header-text-overlay {
+  background: url("../assets/backgroundImage.jpg");
+  background-size: cover;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  text-align: center; }
+
+.top-bar-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none; }
+
+.header-nav-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.main-section-title {
+  text-align: center; }
+
+.main-courses-items-flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  border: 1px solid fuchsia; }
+
+.main-courses-items {
+  border: 1px solid fuchsia; }
+
+.courses-items-flex-icons, .courses-items-flex-users {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.main-news-items-flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: lightgrey; }
+
+.section-about-genius-container {
+  background: lightgrey; }
+
+.main-about-genius-flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.main-pricing-flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.main-pricing-plan-container {
+  width: 33.33%; }

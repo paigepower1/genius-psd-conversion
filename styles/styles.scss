@@ -4,4 +4,92 @@
 @import "partials/variables";
 
 
+// basic styles
+body {
+    font-family: $bodyFont;
+}
+
+.wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+// HEADER STYLES
+
+// header hero image styles
+.header-text-overlay {
+    background: url('../assets/backgroundImage.jpg');background-size: cover;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    text-align: center;
+}
+
+// top bar styles
+.top-bar-content {
+    display: flex;
+    list-style: none;
+}
+
+// header nav styles 
+.header-nav-bar {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+
+// MAIN STYLES START
+
+// main title styles
+.main-section-title {
+    text-align: center;
+}
+
+// main courses styles start
+.main-courses-items-flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid fuchsia;
+}
+
+.main-courses-items {
+    border: 1px solid fuchsia;
+}
+
+.courses-items-flex-icons, .courses-items-flex-users{
+    display: flex;
+}
+
+// main courses styles end
+
+// main gallery styles start
+
+
+// main news styles start
+.main-news-items-flex-container {
+    display: flex;
+    background: $backgroundColor;
+}
+
+// main about Genius styles start
+.section-about-genius-container {
+    background: $backgroundColor;
+}
+
+.main-about-genius-flex-container {
+    display: flex;
+}
+
+// main pricing packages styles start
+.main-pricing-flex-container {
+    display: flex;
+}
+
+.main-pricing-plan-container {
+    width: 33.33%;
+}
+
+
 
