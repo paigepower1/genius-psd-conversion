@@ -1,6 +1,5 @@
 // styles must be cascading in order they appear
 @import "partials/normalize";
-@import "partials/header";
 @import "partials/variables";
 
 
@@ -71,21 +70,23 @@ button:hover {
 // HEADER STYLES END
 
 // MAIN STYLES START
-
 // main title styles
 .main-section-title {
     text-align: center;
 }
 
+// COURSES STYLES START
 // main courses styles start
 .main-courses-items-flex-container {
     display: flex;
     flex-wrap: wrap;
-    border: 1px solid fuchsia;
+    // border: 1px solid fuchsia;
 }
 
 .main-courses-items {
-    border: 1px solid fuchsia;
+    // border: 1px solid fuchsia;
+    flex-basis: 199.5px;
+    padding: 5px;
 }
 
 .courses-items-flex-icons, .courses-items-flex-users{
@@ -104,15 +105,43 @@ button:hover {
 
 // main courses styles end
 
+// GALLERY STYLES START
 // main gallery styles start
+.main-gallery-flex-container ul {
+    display: flex;
+	flex-wrap: wrap;
+    padding: 0;
+    li {
+        list-style: none;
+        flex-basis: 250px;
+        padding: 15px;
+        flex-grow: 1;
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+// main gallery overlay
+.overlay {
+    position: absolute;
+}
 
 
+// main gallery styles end
+
+// NEWS STYLES START
 // main news styles start
 .main-news-items-flex-container {
     display: flex;
     background: $backgroundColor;
+    margin: 40px 0;
+    max-width: 100%;
     img {
-        width: 40%;
+        width: 50%;
+        // position: absolute;
     }
 }
 
@@ -123,7 +152,9 @@ button:hover {
 .main-news-items-flex-icons {
     display: flex;
 }
+// main news styles end
 
+// ABOUT GENIUS STYLES START
 // main about Genius styles start
 .section-about-genius-container {
     background: $backgroundColor;
@@ -133,15 +164,18 @@ button:hover {
     display: flex;
 }
 
+// main about Genius ends
+
+// PRICING STYLES START
 // main pricing packages container styles start
 .main-pricing-flex-container {
     display: flex;
-    border: 1px solid fuchsia;
+    // border: 1px solid fuchsia;
 }
 
 .main-pricing-plan-container {
     width: 33.33%;
-    border: 1px solid fuchsia;
+    // border: 1px solid fuchsia;
     background: $backgroundColor;
     text-align: center;
     margin: 100px 0px 50px 0;
@@ -170,7 +204,6 @@ button:hover {
     width: 70px;
     border-radius: 40px;
     position: absolute;
-    //    background: $accentColor;
     border: 5px solid white;
     text-align: center;
     left:50%;
@@ -209,6 +242,9 @@ button:hover {
     }
 }
 
+.footer-top-icons ul {
+    display: flex;
+}
 
 
 
