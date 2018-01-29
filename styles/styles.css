@@ -139,20 +139,22 @@ body {
   max-width: 800px;
   margin: 0 auto; }
 
+img {
+  max-width: 100%; }
+
 h1 {
   text-transform: uppercase; }
 
-.header-text-overlay {
-  background: url("../assets/backgroundImage.jpg");
-  background-size: cover;
-  height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-  text-align: center; }
-  .header-text-overlay h1 {
-    font-size: 60px;
-    font-weight: 700; }
+li:hover {
+  color: #86bc42; }
+
+button {
+  padding: 10px;
+  border: none; }
+
+button:hover {
+  background: #86bc42;
+  color: white; }
 
 .top-bar-content {
   display: -webkit-box;
@@ -168,6 +170,21 @@ h1 {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center; }
+
+.header-title {
+  background: url("../assets/backgroundImage.jpg");
+  background-size: cover;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat; }
+  .header-title h1 {
+    font-weight: 900;
+    font-size: 70px; }
+
+.header-title-overlay {
+  width: 50%;
+  text-align: center;
+  margin: auto; }
 
 .main-section-title {
   text-align: center; }
@@ -188,11 +205,32 @@ h1 {
   display: -ms-flexbox;
   display: flex; }
 
+.course-items-flex-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .course-items-flex-nav ul li {
+    padding: 5px; }
+
 .main-news-items-flex-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   background: lightgrey; }
+  .main-news-items-flex-container img {
+    width: 40%; }
+
+.main-news-items-text-container {
+  width: 60%; }
+
+.main-news-items-flex-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
 
 .section-about-genius-container {
   background: lightgrey; }
@@ -213,14 +251,34 @@ h1 {
   border: 1px solid fuchsia;
   background: lightgrey;
   text-align: center;
-  margin: 100px 0px 50px 0; }
+  margin: 100px 0px 50px 0;
+  position: relative;
+  display: block; }
   .main-pricing-plan-container ul {
     background: white;
-    padding: 0; }
+    padding: 0;
+    color: black; }
     .main-pricing-plan-container ul li {
       list-style: none;
       text-align: center;
       padding: 10px 10px; }
+
+.main-pricing-plan-container:hover {
+  background: #86bc42;
+  color: white; }
+
+.price-animation p {
+  height: 70px;
+  width: 70px;
+  border-radius: 40px;
+  position: absolute;
+  border: 5px solid white;
+  text-align: center;
+  left: 50%;
+  margin-left: -35px;
+  top: -70px; }
+  .price-animation p p:hover {
+    background: #86bc42; }
 
 .section-footer-top {
   background: #252525;
