@@ -14,6 +14,10 @@ body {
     margin: 0 auto;
 }
 
+h1 {
+    text-transform: uppercase;
+}
+
 // HEADER STYLES
 
 // header hero image styles
@@ -24,6 +28,11 @@ body {
     background-repeat: no-repeat;
     position: relative;
     text-align: center;
+
+    h1 {
+        font-size: 60px;
+        font-weight: 700;
+    }
 }
 
 // top bar styles
@@ -85,11 +94,54 @@ body {
 // main pricing packages styles start
 .main-pricing-flex-container {
     display: flex;
+    border: 1px solid fuchsia;
 }
 
 .main-pricing-plan-container {
     width: 33.33%;
+    border: 1px solid fuchsia;
+    background: $backgroundColor;
+    text-align: center;
+    margin: 100px 0px 50px 0;
+    ul {
+        background: white;
+        padding: 0;
+        li {
+            list-style: none;
+            text-align: center;
+            padding: 10px 10px;
+        }
+    }
 }
+
+// FOOTER STYLES
+// footer top styles start
+.section-footer-top {
+    background: #252525;
+    color: white;
+}
+
+.footer-flex-container {
+    display: flex;
+    ul {
+        list-style: none;
+    }
+}
+
+// footer bottom style start
+.section-footer-bottom {
+    background: black;
+    color: white;
+}
+
+.footer-flex-nav {
+    display: flex;
+    ul {
+        display: flex;
+        list-style: none;
+    }
+}
+
 
 
 
