@@ -26,8 +26,9 @@ li:hover {
 }
 
 button {
-    padding: 10px;
+    // padding: 15px;
     border: none;
+    text-transform: uppercase;
 }
 
 button:hover {
@@ -42,6 +43,16 @@ button:hover {
     list-style: none;
 }
 
+.top-bar-container {
+    background: black;
+    color: white;
+}
+
+.top-bar-flex-container {
+    display: flex;
+    justify-content: space-around;
+}
+
 // header nav styles 
 .header-nav-bar {
     display: flex;
@@ -51,14 +62,24 @@ button:hover {
 
 // header hero image styles
 .header-title {
-    background: url('../assets/backgroundImage.jpg');background-size: cover;
+    background: url('../assets/backgroundImage.jpg');
+    
+    // background-size: cover;
+    background-size: contain;
+
     height: 100vh;
+    min-width: 100%;
     background-position: center;
     background-repeat: no-repeat;
     h1 {
         font-weight: 900;
         font-size: 70px;
     }
+}
+
+.header-title {
+    display: flex;
+    flex-direction: column;
 }
 
 .header-title-overlay {
@@ -77,21 +98,6 @@ button:hover {
 
 // COURSES STYLES START
 // main courses styles start
-.main-courses-items-flex-container {
-    display: flex;
-    flex-wrap: wrap;
-    // border: 1px solid fuchsia;
-}
-
-.main-courses-items {
-    // border: 1px solid fuchsia;
-    flex-basis: 199.5px;
-    padding: 5px;
-}
-
-.courses-items-flex-icons, .courses-items-flex-users{
-    display: flex;
-}
 
 // main courses navigation styles
 .course-items-flex-nav ul {
@@ -101,6 +107,51 @@ button:hover {
     li {
         padding: 5px;
     }
+}
+.main-courses-items-flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main-courses-items {
+    flex-basis: 180px;
+    margin: 10px 10px;
+    border: 1px solid $backgroundColor;
+}
+
+.courses-content {
+    padding: 5px;
+}
+
+.view-course {
+    color: $accentColor;
+}
+
+.courses-title {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.author {
+    line-height: 0;
+}
+
+.view-course {
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 0;
+}
+
+.courses-items-flex-icons, .courses-items-flex-users{
+    display: flex;
+}
+
+.courses-items-flex-icons {
+    color: #666666;
+}
+
+.courses-price {
+    color: $accentColor;
 }
 
 // main courses styles end
@@ -137,22 +188,56 @@ button:hover {
 .main-news-items-flex-container {
     display: flex;
     background: $backgroundColor;
+    max-width: 100%;
     margin: 40px 0;
     max-width: 100%;
     img {
         width: 50%;
-        // position: absolute;
+        position: relative;
+        top: -20px;
+        left: 20px;
     }
 }
 
 .main-news-items-text-container {
+    position: relative;
     width: 60%;
+    padding-left: 40px;
+    button {
+        font-size: 12px;
+        padding: 5px 10px;
+        position: absolute;
+        bottom: 20px;
+    }
+}
+
+.main-news-user-info-container {
+    font-size: 12px;
+    p {
+       margin: 0; 
+       i {
+           padding-right: 5px;
+       }
+    }
 }
 
 .main-news-items-flex-icons {
     display: flex;
 }
+
+.item-title {
+    font-weight: bold;
+}
+
+.news-text {
+    font-size: 12px;
+    line-height: 20px;
+}
+
 // main news styles end
+
+
+
 
 // ABOUT GENIUS STYLES START
 // main about Genius styles start
@@ -170,36 +255,48 @@ button:hover {
 // main pricing packages container styles start
 .main-pricing-flex-container {
     display: flex;
-    // border: 1px solid fuchsia;
+    h2 {
+        text-transform: uppercase;
+        font-size: 15px;
+        padding-top: 29px;
+    }
+}
+
+.payment-plan {
+    font-size: 10px;
 }
 
 .main-pricing-plan-container {
     width: 33.33%;
-    // border: 1px solid fuchsia;
     background: $backgroundColor;
     text-align: center;
-    margin: 100px 0px 50px 0;
+    margin: 100px 10px 50px 10px;
     position: relative;
     display: block;
     ul {
         background: white;
         padding: 0;
         color: black;
+        margin: 0px 10px;
         li {
             list-style: none;
             text-align: center;
-            padding: 10px 10px;
+            padding: 10px 20px;
+            text-transform: capitalize;
+            font-size: 10px;
         }
     }
 }
 
-.main-pricing-plan-container:hover {
-    background: $accentColor;
-    color: white;
+ .pricing-plan {
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: bold;
 }
 
 // main pricing packages price circles
-.price-animation p {
+.price-tag {
+    position: relative;
     height: 70px;
     width: 70px;
     border-radius: 40px;
@@ -208,11 +305,33 @@ button:hover {
     text-align: center;
     left:50%;
     margin-left:-35px;
-    top: -70px;
-    p:hover {
-        background: $accentColor;
+    top: -43px;
+    background: $backgroundColor;
+    p {
+        position: absolute;
+        left: 23px;
+        font-weight: bold;
+        font-size: 20px;
     }
 }
+
+// div.price-tag:hover {
+//     background: $accentColor;
+// }
+
+ span {
+    position: absolute;
+    bottom: 30px;
+    font-size: 12px;
+    left: -7px;
+    bottom: 13px;
+ }
+  
+.main-pricing-plan-container:hover {
+    background: $accentColor;
+    color: white;
+}
+
 
 // FOOTER STYLES
 // footer top styles start

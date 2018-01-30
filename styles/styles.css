@@ -149,8 +149,8 @@ li:hover {
   color: #86bc42; }
 
 button {
-  padding: 10px;
-  border: none; }
+  border: none;
+  text-transform: uppercase; }
 
 button:hover {
   background: #86bc42;
@@ -161,6 +161,17 @@ button:hover {
   display: -ms-flexbox;
   display: flex;
   list-style: none; }
+
+.top-bar-container {
+  background: black;
+  color: white; }
+
+.top-bar-flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around; }
 
 .header-nav-bar {
   display: -webkit-box;
@@ -173,13 +184,23 @@ button:hover {
 
 .header-title {
   background: url("../assets/backgroundImage.jpg");
-  background-size: cover;
+  background-size: contain;
   height: 100vh;
+  min-width: 100%;
   background-position: center;
   background-repeat: no-repeat; }
   .header-title h1 {
     font-weight: 900;
     font-size: 70px; }
+
+.header-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
 
 .header-title-overlay {
   width: 50%;
@@ -188,23 +209,6 @@ button:hover {
 
 .main-section-title {
   text-align: center; }
-
-.main-courses-items-flex-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap; }
-
-.main-courses-items {
-  -ms-flex-preferred-size: 199.5px;
-  flex-basis: 199.5px;
-  padding: 5px; }
-
-.courses-items-flex-icons, .courses-items-flex-users {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
 
 .course-items-flex-nav ul {
   display: -webkit-box;
@@ -216,6 +220,48 @@ button:hover {
   justify-content: center; }
   .course-items-flex-nav ul li {
     padding: 5px; }
+
+.main-courses-items-flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.main-courses-items {
+  -ms-flex-preferred-size: 180px;
+  flex-basis: 180px;
+  margin: 10px 10px;
+  border: 1px solid lightgrey; }
+
+.courses-content {
+  padding: 5px; }
+
+.view-course {
+  color: #86bc42; }
+
+.courses-title {
+  font-weight: bold;
+  font-size: 14px; }
+
+.author {
+  line-height: 0; }
+
+.view-course {
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 0; }
+
+.courses-items-flex-icons, .courses-items-flex-users {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.courses-items-flex-icons {
+  color: #666666; }
+
+.courses-price {
+  color: #86bc42; }
 
 .main-gallery-flex-container ul {
   display: -webkit-box;
@@ -245,18 +291,43 @@ button:hover {
   display: -ms-flexbox;
   display: flex;
   background: lightgrey;
+  max-width: 100%;
   margin: 40px 0;
   max-width: 100%; }
   .main-news-items-flex-container img {
-    width: 50%; }
+    width: 50%;
+    position: relative;
+    top: -20px;
+    left: 20px; }
 
 .main-news-items-text-container {
-  width: 60%; }
+  position: relative;
+  width: 60%;
+  padding-left: 40px; }
+  .main-news-items-text-container button {
+    font-size: 12px;
+    padding: 5px 10px;
+    position: absolute;
+    bottom: 20px; }
+
+.main-news-user-info-container {
+  font-size: 12px; }
+  .main-news-user-info-container p {
+    margin: 0; }
+    .main-news-user-info-container p i {
+      padding-right: 5px; }
 
 .main-news-items-flex-icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+
+.item-title {
+  font-weight: bold; }
+
+.news-text {
+  font-size: 12px;
+  line-height: 20px; }
 
 .section-about-genius-container {
   background: lightgrey; }
@@ -270,28 +341,40 @@ button:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+  .main-pricing-flex-container h2 {
+    text-transform: uppercase;
+    font-size: 15px;
+    padding-top: 29px; }
+
+.payment-plan {
+  font-size: 10px; }
 
 .main-pricing-plan-container {
   width: 33.33%;
   background: lightgrey;
   text-align: center;
-  margin: 100px 0px 50px 0;
+  margin: 100px 10px 50px 10px;
   position: relative;
   display: block; }
   .main-pricing-plan-container ul {
     background: white;
     padding: 0;
-    color: black; }
+    color: black;
+    margin: 0px 10px; }
     .main-pricing-plan-container ul li {
       list-style: none;
       text-align: center;
-      padding: 10px 10px; }
+      padding: 10px 20px;
+      text-transform: capitalize;
+      font-size: 10px; }
 
-.main-pricing-plan-container:hover {
-  background: #86bc42;
-  color: white; }
+.pricing-plan {
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: bold; }
 
-.price-animation p {
+.price-tag {
+  position: relative;
   height: 70px;
   width: 70px;
   border-radius: 40px;
@@ -300,9 +383,24 @@ button:hover {
   text-align: center;
   left: 50%;
   margin-left: -35px;
-  top: -70px; }
-  .price-animation p p:hover {
-    background: #86bc42; }
+  top: -43px;
+  background: lightgrey; }
+  .price-tag p {
+    position: absolute;
+    left: 23px;
+    font-weight: bold;
+    font-size: 20px; }
+
+span {
+  position: absolute;
+  bottom: 30px;
+  font-size: 12px;
+  left: -7px;
+  bottom: 13px; }
+
+.main-pricing-plan-container:hover {
+  background: #86bc42;
+  color: white; }
 
 .section-footer-top {
   background: #252525;
