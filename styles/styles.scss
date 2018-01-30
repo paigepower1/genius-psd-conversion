@@ -9,7 +9,8 @@ body {
 }
 
 .wrapper {
-    max-width: 800px;
+    max-width: 1170px;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -26,13 +27,14 @@ li:hover {
 }
 
 button {
-    // padding: 15px;
     border: none;
     text-transform: uppercase;
+    background: $accentColor;
+    font-weight: 700;
+    padding: 5px 10px;
 }
 
 button:hover {
-    background: $accentColor;
     color: white;
 }
 
@@ -63,17 +65,14 @@ button:hover {
 // header hero image styles
 .header-title {
     background: url('../assets/backgroundImage.jpg');
-    
-    // background-size: cover;
-    background-size: contain;
-
+    background-size: cover;
     height: 100vh;
     min-width: 100%;
     background-position: center;
     background-repeat: no-repeat;
     h1 {
         font-weight: 900;
-        font-size: 70px;
+        font-size: 60px;
     }
 }
 
@@ -86,6 +85,9 @@ button:hover {
     width: 50%;
     text-align: center;
     margin: auto;
+    button {
+        padding: 10px 20px;
+    }
 }
 
 // HEADER STYLES END
@@ -94,6 +96,16 @@ button:hover {
 // main title styles
 .main-section-title {
     text-align: center;
+    margin: 40px;
+    h1 {
+        margin: 5px 0;
+    }
+}
+
+.main-section-title p {
+    margin-bottom: 0;
+    margin-top: 40px;
+    text-transform: uppercase;
 }
 
 // COURSES STYLES START
@@ -108,15 +120,20 @@ button:hover {
         padding: 5px;
     }
 }
+
 .main-courses-items-flex-container {
     display: flex;
     flex-wrap: wrap;
 }
 
 .main-courses-items {
-    flex-basis: 180px;
+    flex-basis: 272px;
     margin: 10px 10px;
     border: 1px solid $backgroundColor;
+    flex-grow: 1;
+    img {
+        width: 100%;
+    }
 }
 
 .courses-content {
@@ -129,7 +146,7 @@ button:hover {
 
 .courses-title {
     font-weight: bold;
-    font-size: 14px;
+    font-size: 18px;
 }
 
 .author {
@@ -144,6 +161,7 @@ button:hover {
 
 .courses-items-flex-icons, .courses-items-flex-users{
     display: flex;
+    justify-content: space-between;
 }
 
 .courses-items-flex-icons {
@@ -164,7 +182,7 @@ button:hover {
     padding: 0;
     li {
         list-style: none;
-        flex-basis: 250px;
+        flex-basis: 300px;
         padding: 15px;
         flex-grow: 1;
         img {
@@ -205,7 +223,6 @@ button:hover {
     padding-left: 40px;
     button {
         font-size: 12px;
-        padding: 5px 10px;
         position: absolute;
         bottom: 20px;
     }
@@ -237,24 +254,54 @@ button:hover {
 // main news styles end
 
 
-
-
 // ABOUT GENIUS STYLES START
 // main about Genius styles start
 .section-about-genius-container {
     background: $backgroundColor;
+    height: 400px;
+}
+
+.about-flex-content {
+    display: flex;
+    position: relative;
+    z-index: 1;
+    h2 {
+        margin: 0 5px;
+        font-size: 24px;
+    }
+}
+
+.about-info p {
+    font-size: 12px;
+    margin: 10px 5px;
+    line-height: 17px;
 }
 
 .main-about-genius-flex-container {
     display: flex;
 }
 
+// circle
+.border-radius {
+    height: 170px;
+    width: 170px;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+    z-index: -1;
+    top: -30px;
+    left: -20px;
+    background-color: $circleColor;
+}
+
 // main about Genius ends
 
 // PRICING STYLES START
 // main pricing packages container styles start
+// container holding all three packages together
 .main-pricing-flex-container {
     display: flex;
+    flex-wrap: wrap;
     h2 {
         text-transform: uppercase;
         font-size: 15px;
@@ -266,6 +313,7 @@ button:hover {
     font-size: 10px;
 }
 
+// pricing container styles
 .main-pricing-plan-container {
     width: 33.33%;
     background: $backgroundColor;
@@ -273,6 +321,8 @@ button:hover {
     margin: 100px 10px 50px 10px;
     position: relative;
     display: block;
+    flex-grow: 1;
+    flex-basis: 300px;
     ul {
         background: white;
         padding: 0;
@@ -281,24 +331,25 @@ button:hover {
         li {
             list-style: none;
             text-align: center;
-            padding: 10px 20px;
+            padding: 16px 0;
             text-transform: capitalize;
             font-size: 10px;
         }
     }
 }
 
+// choose plan 
  .pricing-plan {
     text-transform: uppercase;
     font-size: 10px;
     font-weight: bold;
 }
 
-// main pricing packages price circles
+//price circle styles
 .price-tag {
     position: relative;
-    height: 70px;
-    width: 70px;
+    height: 80px;
+    width: 80px;
     border-radius: 40px;
     position: absolute;
     border: 5px solid white;
@@ -312,21 +363,22 @@ button:hover {
         left: 23px;
         font-weight: bold;
         font-size: 20px;
+        span {
+            position: absolute;
+            bottom: 30px;
+            font-size: 12px;
+            left: -7px;
+            bottom: 13px;
+        }
     }
+} 
+
+// accent color hover on container and circle price tag
+.main-pricing-plan-container:hover .price-tag {
+    background: $accentColor;
+    box-shadow: 1px 1px 10px 2px grey;
 }
 
-// div.price-tag:hover {
-//     background: $accentColor;
-// }
-
- span {
-    position: absolute;
-    bottom: 30px;
-    font-size: 12px;
-    left: -7px;
-    bottom: 13px;
- }
-  
 .main-pricing-plan-container:hover {
     background: $accentColor;
     color: white;
