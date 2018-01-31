@@ -143,6 +143,24 @@ li.divider {
     flex-direction: column;
 }
 
+// header text media query 
+@media screen and (max-width: 880px) {
+    .header-title h1 {
+        font-size: 60px;
+    }
+}
+
+@media screen and (max-width: 722px){
+    .header-title h1 {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header-title h1 {
+        font-size: 25px;
+    }
+}
 // HEADER STYLES END
 
 // MAIN STYLES START
@@ -546,6 +564,7 @@ p.pricing-plan {
     line-height: 24px;
     i {
         padding-right: 10px;
+        color: $accentColor;
     }
 }
 
@@ -577,5 +596,6 @@ p.pricing-plan {
     display: flex;
 }
 
+// bottom bar styles 
 
 

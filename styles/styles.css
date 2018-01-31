@@ -254,6 +254,18 @@ li.divider {
   -ms-flex-direction: column;
   flex-direction: column; }
 
+@media screen and (max-width: 880px) {
+  .header-title h1 {
+    font-size: 60px; } }
+
+@media screen and (max-width: 722px) {
+  .header-title h1 {
+    font-size: 40px; } }
+
+@media screen and (max-width: 480px) {
+  .header-title h1 {
+    font-size: 25px; } }
+
 .main-section-title {
   text-align: center;
   margin: 40px;
@@ -596,7 +608,8 @@ p.pricing-plan {
   padding-left: 0;
   line-height: 24px; }
   .footer-options-container ul i {
-    padding-right: 10px; }
+    padding-right: 10px;
+    color: #86bc42; }
 
 .footer-options-container h2 {
   text-transform: uppercase;
