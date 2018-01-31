@@ -133,7 +133,8 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   box-sizing: border-box; }
 
 body {
-  font-family: "Raleway", sans-serif; }
+  font-family: "Raleway", sans-serif;
+  overflow-x: hidden; }
 
 .wrapper {
   max-width: 1170px;
@@ -154,18 +155,21 @@ button {
   text-transform: uppercase;
   background: #86bc42;
   font-weight: 700;
-  padding: 5px 10px; }
+  padding: 5px 10px;
+  color: white; }
 
 button:hover {
-  color: white; }
+  background: #79a93b; }
 
 .top-bar-content {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-  list-style: none; }
+  display: flex; }
+  .top-bar-content i {
+    color: #86bc42; }
 
 .top-bar-container {
+  height: 80px;
   background: black;
   color: white; }
 
@@ -173,17 +177,34 @@ button:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -ms-flex-pack: distribute;
-  justify-content: space-around; }
+  justify-content: space-around;
+  font-size: 12px; }
+  .top-bar-flex-container li {
+    list-style: none; }
+
+.logo-center {
+  font-size: 12px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
 
 .header-nav-bar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  list-style: none;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center; }
+  .header-nav-bar li {
+    font-weight: 700;
+    list-style: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 8px; }
 
 .header-title {
   background: url("../assets/backgroundImage.jpg");
@@ -234,14 +255,14 @@ button:hover {
   .course-items-flex-nav ul li {
     padding: 5px; }
 
-.main-courses-items-flex-container {
+.main-course-items-flex-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
 
-.main-courses-items {
+.main-course-items {
   -ms-flex-preferred-size: 272px;
   flex-basis: 272px;
   margin: 10px 10px;
@@ -249,28 +270,44 @@ button:hover {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1; }
-  .main-courses-items img {
+  .main-course-items img {
     width: 100%; }
 
-.courses-content {
+.course-content {
   padding: 5px; }
 
-.view-course {
-  color: #86bc42; }
-
-.courses-title {
+.course-title {
   font-weight: bold;
   font-size: 18px; }
 
+.circle-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10px; }
+
+.profile-photo {
+  height: 42px;
+  width: 42px;
+  border-radius: 50%;
+  background: #b7b7b7;
+  margin-right: 10px; }
+
+.course-author {
+  border-bottom: 1px solid #f0f2f7; }
+
 .author {
-  line-height: 0; }
+  line-height: 0;
+  padding-bottom: 5px;
+  margin-top: 10px; }
 
 .view-course {
   text-transform: uppercase;
   font-size: 12px;
-  line-height: 0; }
+  line-height: 0;
+  color: #86bc42; }
 
-.courses-items-flex-icons, .courses-items-flex-users {
+.course-items-flex-icons, .course-items-flex-users {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -278,10 +315,14 @@ button:hover {
   -ms-flex-pack: justify;
   justify-content: space-between; }
 
-.courses-items-flex-icons {
+.course-items-flex-icons {
   color: #666666; }
+  .course-items-flex-icons p {
+    margin-right: 7px; }
+    .course-items-flex-icons p i {
+      margin-right: 5px; }
 
-.courses-price {
+.course-price {
   color: #86bc42; }
 
 .main-gallery-flex-container ul {
@@ -324,9 +365,10 @@ button:hover {
 .main-news-items-text-container {
   position: relative;
   width: 60%;
-  padding-left: 40px; }
+  padding-left: 60px;
+  padding-right: 40px; }
   .main-news-items-text-container button {
-    font-size: 12px;
+    font-size: 14px;
     position: absolute;
     bottom: 20px; }
 
@@ -343,11 +385,22 @@ button:hover {
   display: flex; }
 
 .item-title {
-  font-weight: bold; }
+  font-weight: bold;
+  font-size: 24px; }
 
 .news-text {
-  font-size: 12px;
-  line-height: 20px; }
+  font-size: 14px;
+  line-height: 30px;
+  margin-top: 60px; }
+
+@media screen and (max-width: 980px) {
+  .main-news-items-flex-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .main-news-items-flex-container img {
+      display: none; } }
 
 .section-about-genius-container {
   background: #f0f2f7;
@@ -453,8 +506,8 @@ button:hover {
 
 .main-pricing-plan-container:hover .price-tag {
   background: #86bc42;
-  -webkit-box-shadow: 1px 1px 10px 2px grey;
-  box-shadow: 1px 1px 10px 2px grey; }
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 1, 0.25);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 1, 0.25); }
 
 .main-pricing-plan-container:hover {
   background: #86bc42;
