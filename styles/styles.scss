@@ -41,15 +41,8 @@ button:hover {
 }
 
 // HEADER STYLES
-// top bar styles
-.top-bar-content {
-    display: flex;
-    i {
-        color: $accentColor;
-    }
-}
-
-.top-bar-container {
+// top bar styles.
+top-bar-container {
     height: 80px;;
     background: black;
     color: white;
@@ -65,10 +58,46 @@ button:hover {
     }
 }
 
+.top-bar ul {
+    padding-left: 0;
+}
+
+.top-bar-content {
+    display: flex;
+    i {
+        color: $accentColor;
+        margin-right: 10px;
+    }
+}
+
+.top-bar-left li:first-child {
+    margin-right: 10px;
+}
+
+.top-bar-container {
+    background: black;
+    color: white;
+}
+
 // logo styles
 .logo-center {
     font-size: 12px;
     align-items: center;
+}
+
+// divider between registration and login
+li.divider {
+    margin: 0 10px;
+}
+
+// top bar media query 
+@media screen and (max-width: 780px) {
+    .top-bar-flex-container {
+        flex-direction: column;
+        // .top-bar-container {
+        //     height: 5vh;
+        // }
+    }
 }
 
 // header nav styles 
@@ -85,6 +114,7 @@ button:hover {
 }
 
 // header hero image styles
+// background image
 .header-title {
     background: url('../assets/backgroundImage.jpg');
     background-size: cover;
@@ -92,15 +122,11 @@ button:hover {
     min-width: 100%;
     background-position: center;
     background-repeat: no-repeat;
+    // text
     h1 {
         font-weight: 900;
-        font-size: 60px;
+        font-size: 72px;
     }
-}
-
-.header-title {
-    display: flex;
-    flex-direction: column;
 }
 
 .header-title-overlay {
@@ -112,16 +138,26 @@ button:hover {
     }
 }
 
+.header-title {
+    display: flex;
+    flex-direction: column;
+}
+
 // HEADER STYLES END
 
 // MAIN STYLES START
-// main title styles
+// main title styles for each section
 .main-section-title {
     text-align: center;
     margin: 40px;
+    margin-top: 60px;
     h1 {
         margin: 5px 0;
     }
+}
+
+.main-section-title p {
+    padding-top: 50px;
 }
 
 .main-section-title p {
@@ -138,6 +174,7 @@ button:hover {
     display: flex;
     list-style: none;
     justify-content: center;
+    padding-left: 0;
     li {
         padding: 5px;
     }
@@ -217,10 +254,23 @@ button:hover {
     color: $accentColor;
 }
 
+// main courses nav media queriy 
+@media screen and (max-width: 750px) {
+    .course-items-flex-nav ul {
+        flex-direction: column;
+        text-align: center;
+        padding-left: 0;
+    }
+}
+
 // main courses styles end
 
 // GALLERY STYLES START
 // main gallery styles start
+.section-main-gallery {
+    background: $backgroundColor;
+}
+
 .main-gallery-flex-container ul {
     display: flex;
 	flex-wrap: wrap;
@@ -291,6 +341,7 @@ button:hover {
 .item-title {
     font-weight: bold;
     font-size: 24px;
+    margin-top: 40px;
 }
 
 .news-text {
@@ -300,14 +351,23 @@ button:hover {
 }
 
 // main news media queries start 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 1068px) {
     .main-news-items-flex-container {
         flex-direction: column;
+        max-width: 100%;
         img {
             display: none;
         }
     }
 }
+
+@media screen and (max-width: 1068px) {
+    p.news-text {
+        margin-top: 30px;
+        margin-bottom: 80px;
+    }
+}
+
 
 // main news styles end
 
@@ -351,7 +411,6 @@ button:hover {
     left: -20px;
     background-color: $circleColor;
 }
-
 // main about Genius ends
 
 // PRICING STYLES START
@@ -362,13 +421,16 @@ button:hover {
     flex-wrap: wrap;
     h2 {
         text-transform: uppercase;
-        font-size: 15px;
+        font-size: 24px;
         padding-top: 29px;
+        margin-bottom: 0;
     }
 }
 
-.payment-plan {
-    font-size: 10px;
+p.payment-plan {
+    font-size: 14px;
+    margin-bottom: 30px;
+    margin-top: 0;
 }
 
 // pricing container styles
@@ -376,7 +438,7 @@ button:hover {
     width: 33.33%;
     background: $backgroundColor;
     text-align: center;
-    margin: 100px 10px 50px 10px;
+    margin: 76px 47px 44px 3px;
     position: relative;
     display: block;
     flex-grow: 1;
@@ -391,36 +453,51 @@ button:hover {
             text-align: center;
             padding: 16px 0;
             text-transform: capitalize;
-            font-size: 10px;
+            font-size: 14px;
         }
     }
+}
+
+.main-pricing-plan-container li:first-child {
+    padding-top: 30px;
+}
+
+.main-pricing-plan-container li:last-child {
+    padding-bottom: 30px;
 }
 
 // choose plan 
  .pricing-plan {
     text-transform: uppercase;
-    font-size: 10px;
+    font-size: 14px;
     font-weight: bold;
+}
+
+p.pricing-plan {
+    margin: 25px;
 }
 
 //price circle styles
 .price-tag {
     position: relative;
-    height: 80px;
-    width: 80px;
-    border-radius: 40px;
-    position: absolute;
-    border: 5px solid white;
-    text-align: center;
-    left:50%;
-    margin-left:-35px;
-    top: -43px;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    border: 10px solid white;
     background: $backgroundColor;
+    // centering price tag
+    position: absolute;
+    top: -70px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    // number
     p {
         position: absolute;
-        left: 23px;
+        left: 25px;
+        top: -25px;
         font-weight: bold;
-        font-size: 20px;
+        font-size: 38px;
+        // dollar sign
         span {
             position: absolute;
             bottom: 30px;
@@ -448,14 +525,39 @@ button:hover {
 .section-footer-top {
     background: #252525;
     color: white;
+    font-size: 13px;
 }
 
 .footer-flex-container {
     display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     ul {
         list-style: none;
     }
 }
+
+.footer-options-container {
+    max-width: 25%;
+}
+
+.footer-options-container ul {
+    padding-left: 0;
+    line-height: 24px;
+    i {
+        padding-right: 10px;
+    }
+}
+
+.footer-options-container h2 {
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+
+// .footer-logo-color span {
+//     color: $accentColor;
+// }
 
 // footer bottom style start
 .section-footer-bottom {
