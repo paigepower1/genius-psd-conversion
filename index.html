@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="./styles/styles.css">
-    <title>Genius</title>
+    <title>Genius psd conversion</title>
 </head>
 <body>
     <!-- HEADER STARTS -->
@@ -41,7 +41,9 @@
         
         <!-- header nav starts -->
         <section class="header-nav-flex-container">
-            <nav class="header-nav-bar-row">
+            <nav class="header-nav-bar-row clearfix">
+                <label for="toggle">&#9776;</label>
+                <input type="checkbox" id="toggle">
                 <ul class="header-nav-bar">
                     <li>Home</li>
                     <li>Pages</li>
@@ -477,17 +479,17 @@
 
         <!-- ABOUT GENIUS -->
         <!-- mains section about genius starts -->
-        <section class="section-about-genius-container">
+        <!-- <section class="section-about-genius-container">
            <div class="main-about-genius-container wrapper">
                 <div class="main-section-title">
                     <p>Lorem ipsum dolor</p>
                     <h1>Latest News</h1>
                     <img src="./assets/openMagazine.png" alt="open book">
-                </div>
+                </div> -->
                 <!-- about flex container -->
-                <div class="main-about-genius-flex-container">
+                <!-- <div class="main-about-genius-flex-container">
                     <!-- concept -->
-                    <div class="main-about-genius-flex-items">
+                    <!-- <div class="main-about-genius-flex-items">
                         <div class="about-flex-content">
                             <div class="border-radius"></div>
                             <div class="about-icon">
@@ -499,10 +501,10 @@
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sed commodi saepe consequatur eius voluptates nesciunt beatae? Dignissimos, quis!
                                 </p>
                             </div>
-                        </div>
-                    </div>
+                        </div> -->
+                    <!-- </div> -->
                     <!-- experience -->
-                    <div class="main-about-genius-flex-items">
+                    <!-- <div class="main-about-genius-flex-items">
                         <div class="about-flex-content">
                             <div class="border-radius"></div>
                             <div class="about-icon">
@@ -516,9 +518,9 @@
                                 </p>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- design -->
-                    <div class="main-about-genius-flex-items">
+                    <!-- <div class="main-about-genius-flex-items">
                         <div class="about-flex-content">
                             <div class="border-radius"></div>
                             <div class="about-icon">
@@ -535,7 +537,7 @@
                     </div>
                 </div>
            </div>
-        </section>
+        </section> -->
         <!-- about section ends -->
 
         <!-- PRICING PACKAGES -->
@@ -655,11 +657,16 @@
                         <nav>
                             <ul>
                                 <li><i class="fa fa-angle-right" aria-hidden="true"></i><span class="sr-only">angle right icon</span>Courses</li>
-                                <li>Events</li>
-                                <li>Gallery</li>
-                                <li>FAQ's</li>
-                                <li>Blog</li>
-                                <li>Contact</li>
+                                <li><i class="fa fa-angle-right" aria-hidden="true"></i>
+                                <span class="sr-only">angle right icon</span>Events</li>
+                                <li><i class="fa fa-angle-right" aria-hidden="true"></i>
+                                <span class="sr-only">angle right icon</span>Gallery</li>
+                                <li><i class="fa fa-angle-right" aria-hidden="true"></i>
+                                <span class="sr-only">angle right icon</span>FAQ's</li>
+                                <li><i class="fa fa-angle-right" aria-hidden="true"></i>
+                                <span class="sr-only">angle right icon</span>Blog</li>
+                                <li><i class="fa fa-angle-right" aria-hidden="true"></i>
+                                <span class="sr-only">angle right icon</span>Contact</li>
                             </ul>
                         </nav>
                     </div>
@@ -685,7 +692,7 @@
                 <div class="footer-options-container">
                     <h2>Newsletter</h2>
                     <p>Sign up for new Envato content, updates, sureveys and offers</p>
-                    <input type="Email" name="Enter you email" id=""><i class="fa fa-paper-plane" aria-hidden="true"></i><span class="sr-only">send icon</span>
+                    <input type="Email" placeholder="Enter email" id="">
                     <div class="footer-top-icons">
                         <p>We respect your privacy</p>
                         <ul>
@@ -725,6 +732,8 @@
     </footer>
     <!-- footer ends -->
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="main.js"></script>
 <script src="https://use.fontawesome.com/c6c8a2d0bc.js"></script>
 </body>
 </html>

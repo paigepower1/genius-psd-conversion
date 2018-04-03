@@ -2,8 +2,9 @@
 @import "partials/normalize";
 @import "partials/variables";
 
-
-// BASIC STYLES
+// ==========================
+//         BASIC STYLES
+// ==========================
 body {
     font-family: $bodyFont;
     overflow-x: hidden;
@@ -40,10 +41,12 @@ button:hover {
     background: $dark;
 }
 
-// HEADER STYLES
-// top bar styles.
-top-bar-container {
-    height: 80px;;
+// ==========================
+//         HEADER STYLES
+// ==========================
+// top bar styles
+.top-bar-container {
+    // height: 80px;
     background: black;
     color: white;
 }
@@ -74,12 +77,14 @@ top-bar-container {
     margin-right: 10px;
 }
 
-.top-bar-container {
-    background: black;
-    color: white;
-}
+// .top-bar-container {
+//     background: black;
+//     color: white;
+// }
 
-// logo styles
+// ==========================
+//         LOGO STYLES
+// ==========================
 .logo-center {
     font-size: 12px;
     align-items: center;
@@ -94,22 +99,60 @@ li.divider {
 @media screen and (max-width: 780px) {
     .top-bar-flex-container {
         flex-direction: column;
-        // .top-bar-container {
-        //     height: 5vh;
-        // }
     }
 }
 
-// header nav styles 
+// ===============================
+//         HEADER NAV STYLES
+// ===============================
 .header-nav-bar {
     display: flex;
+    flex-direction: row;
     justify-content: center;
+    padding: 0;
     li {
         font-weight: 700;
         list-style: none;
         text-transform: uppercase;
         font-size: 14px;
         padding: 8px;
+    }
+}
+
+// ===================================
+//         HAMBURGER NAV STYLES
+// ===================================
+
+label {
+    margin: 0 40px 0 0;
+    font-size: 26px;
+    line-height: 70px;
+    display: none;
+    // display: flex;
+    // justify-content: flex-start;
+}
+
+#toggle {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    label {
+        display: block;
+        cursor: pointer;
+    }
+    .header-nav-bar {
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+    .header-nav-bar li {
+        display: block;
+        border-bottom: 1px solid grey;
+        margin: 0;
+    }
+    #toggle:checked + .header-nav-bar {
+        display: block;
     }
 }
 
@@ -161,9 +204,13 @@ li.divider {
         font-size: 25px;
     }
 }
-// HEADER STYLES END
+// ================================
+//         HEADER STYLES END
+// ================================
 
-// MAIN STYLES START
+// =================================
+//         MAIN STYLES START
+// =================================
 // main title styles for each section
 .main-section-title {
     text-align: center;
@@ -181,10 +228,13 @@ li.divider {
 .main-section-title p {
     margin-bottom: 0;
     margin-top: 40px;
+    // padding-top: 0;
     text-transform: uppercase;
 }
 
-// COURSES STYLES START
+// ==================================
+//         COURSES STYLES START
+// ==================================
 // main courses styles start
 
 // main courses navigation styles
@@ -283,7 +333,9 @@ li.divider {
 
 // main courses styles end
 
-// GALLERY STYLES START
+// ================================
+//         MAIN GALLERY STYLES
+// ================================
 // main gallery styles start
 .section-main-gallery {
     background: $backgroundColor;
@@ -314,7 +366,9 @@ li.divider {
 
 // main gallery styles end
 
-// NEWS STYLES START
+// ===============================
+//        NEWS STYLES START
+// ===============================
 // main news styles start
 .main-news-items-flex-container {
     display: flex;
@@ -354,6 +408,9 @@ li.divider {
 
 .main-news-items-flex-icons {
     display: flex;
+    p {
+        padding: 5px;
+    }
 }
 
 .item-title {
@@ -383,6 +440,23 @@ li.divider {
     p.news-text {
         margin-top: 30px;
         margin-bottom: 80px;
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    p.news-text {
+        margin-top: 30px;
+        margin-bottom: 80px;
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    p.news-text {
+        margin-top: 30px;
+        margin-bottom: 80px;
+        width: 200px;
     }
 }
 
@@ -390,48 +464,67 @@ li.divider {
 // main news styles end
 
 
-// ABOUT GENIUS STYLES START
+// ===================================
+//         ABOUT STYLES START
+// ===================================
 // main about Genius styles start
-.section-about-genius-container {
-    background: $backgroundColor;
-    height: 400px;
-}
+// .section-about-genius-container {
+//     background: $backgroundColor;
+//     height: 400px;
+// }
 
-.about-flex-content {
-    display: flex;
-    position: relative;
-    z-index: 1;
-    h2 {
-        margin: 0 5px;
-        font-size: 24px;
-    }
-}
+// .about-flex-content {
+//     display: flex;
+//     position: relative;
+//     z-index: 1;
+//     h2 {
+//         margin: 0 5px;
+//         font-size: 24px;
+//     }
+// }
 
-.about-info p {
-    font-size: 12px;
-    margin: 10px 5px;
-    line-height: 17px;
-}
+// .about-info p {
+//     font-size: 12px;
+//     margin: 10px 5px;
+//     line-height: 17px;
+// }
 
-.main-about-genius-flex-container {
-    display: flex;
-}
+// .main-about-genius-flex-container {
+//     display: flex;
+// }
 
-// circle
-.border-radius {
-    height: 170px;
-    width: 170px;
-    border-radius: 50%;
-    background: white;
-    position: absolute;
-    z-index: -1;
-    top: -30px;
-    left: -20px;
-    background-color: $circleColor;
-}
+// // circle
+// .border-radius {
+//     height: 170px;
+//     width: 170px;
+//     border-radius: 50%;
+//     background: white;
+//     position: absolute;
+//     z-index: -1;
+//     top: -30px;
+//     left: -20px;
+//     background-color: $circleColor;
+// }
+
+// // media queries 
+// @media screen and (max-width: 800px) {
+//     .border-radius {
+//         height: 100px;
+//         width: 100px;
+//         .about-flex-content h2 {
+//             font-size: 10px;
+//         }
+//     }
+// }
+
+
+
+
 // main about Genius ends
 
-// PRICING STYLES START
+// ======================================
+//         PRICING STYLES STYLES
+// ======================================
 // main pricing packages container styles start
 // container holding all three packages together
 .main-pricing-flex-container {
@@ -451,12 +544,15 @@ p.payment-plan {
     margin-top: 0;
 }
 
-// pricing container styles
+// ========================================
+//         PRICING CONTAINER STYLES
+// ========================================
 .main-pricing-plan-container {
     width: 33.33%;
     background: $backgroundColor;
     text-align: center;
     margin: 76px 47px 44px 3px;
+    margin-right: 0;
     position: relative;
     display: block;
     flex-grow: 1;
@@ -495,7 +591,9 @@ p.pricing-plan {
     margin: 25px;
 }
 
-//price circle styles
+// =================================
+//         PRICE CIRCLE STYLES
+// =================================
 .price-tag {
     position: relative;
     height: 100px;
@@ -511,7 +609,7 @@ p.pricing-plan {
     // number
     p {
         position: absolute;
-        left: 25px;
+        left: 29px;
         top: -25px;
         font-weight: bold;
         font-size: 38px;
@@ -520,7 +618,7 @@ p.pricing-plan {
             position: absolute;
             bottom: 30px;
             font-size: 12px;
-            left: -7px;
+            left: -10px;
             bottom: 13px;
         }
     }
@@ -538,7 +636,9 @@ p.pricing-plan {
 }
 
 
-// FOOTER STYLES
+// =================================
+//         FOOTER STYLES START
+// =================================
 // footer top styles start
 .section-footer-top {
     background: #252525;
@@ -570,25 +670,13 @@ p.pricing-plan {
 
 .footer-options-container h2 {
     text-transform: uppercase;
-    font-size: 24px;
+    font-size: 20px;
 }
 
-
-// .footer-logo-color span {
-//     color: $accentColor;
-// }
-
-// footer bottom style start
-.section-footer-bottom {
-    background: black;
-    color: white;
-}
-
-.footer-flex-nav {
-    display: flex;
-    ul {
-        display: flex;
-        list-style: none;
+@media screen and (max-width: 680px) {
+    .footer-flex-container {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -596,6 +684,33 @@ p.pricing-plan {
     display: flex;
 }
 
+// ===============================
+//         FOOTER BOTTOM STYLES
+// ===============================
+
+
 // bottom bar styles 
+
+
+.footer-flex-nav {
+    display: flex;
+    
+    ul {
+        display: flex;
+        list-style: none;
+        padding: 0 30px ;
+        padding-left: 0;
+        li {
+            padding: 0 10px;
+            padding-left: 0;
+        }
+    }
+}
+
+
+.section-footer-bottom {
+    background: black;
+    color: white;
+}
 
 

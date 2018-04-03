@@ -161,8 +161,7 @@ button {
 button:hover {
   background: #79a93b; }
 
-top-bar-container {
-  height: 80px;
+.top-bar-container {
   background: black;
   color: white; }
 
@@ -193,10 +192,6 @@ top-bar-container {
 .top-bar-left li:first-child {
   margin-right: 10px; }
 
-.top-bar-container {
-  background: black;
-  color: white; }
-
 .logo-center {
   font-size: 12px;
   -webkit-box-align: center;
@@ -217,15 +212,44 @@ li.divider {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+  justify-content: center;
+  padding: 0; }
   .header-nav-bar li {
     font-weight: 700;
     list-style: none;
     text-transform: uppercase;
     font-size: 14px;
     padding: 8px; }
+
+label {
+  margin: 0 40px 0 0;
+  font-size: 26px;
+  line-height: 70px;
+  display: none; }
+
+#toggle {
+  display: none; }
+
+@media screen and (max-width: 600px) {
+  label {
+    display: block;
+    cursor: pointer; }
+  .header-nav-bar {
+    text-align: center;
+    width: 100%;
+    display: none; }
+  .header-nav-bar li {
+    display: block;
+    border-bottom: 1px solid grey;
+    margin: 0; }
+  #toggle:checked + .header-nav-bar {
+    display: block; } }
 
 .header-title {
   background: url("../assets/backgroundImage.jpg");
@@ -433,6 +457,8 @@ li.divider {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+  .main-news-items-flex-icons p {
+    padding: 5px; }
 
 .item-title {
   font-weight: bold;
@@ -457,42 +483,20 @@ li.divider {
 @media screen and (max-width: 1068px) {
   p.news-text {
     margin-top: 30px;
-    margin-bottom: 80px; } }
+    margin-bottom: 80px;
+    width: 500px; } }
 
-.section-about-genius-container {
-  background: #f0f2f7;
-  height: 400px; }
+@media screen and (max-width: 680px) {
+  p.news-text {
+    margin-top: 30px;
+    margin-bottom: 80px;
+    width: 350px; } }
 
-.about-flex-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  z-index: 1; }
-  .about-flex-content h2 {
-    margin: 0 5px;
-    font-size: 24px; }
-
-.about-info p {
-  font-size: 12px;
-  margin: 10px 5px;
-  line-height: 17px; }
-
-.main-about-genius-flex-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-
-.border-radius {
-  height: 170px;
-  width: 170px;
-  border-radius: 50%;
-  background: white;
-  position: absolute;
-  z-index: -1;
-  top: -30px;
-  left: -20px;
-  background-color: rgba(255, 255, 255, 0.5); }
+@media screen and (max-width: 480px) {
+  p.news-text {
+    margin-top: 30px;
+    margin-bottom: 80px;
+    width: 200px; } }
 
 .main-pricing-flex-container {
   display: -webkit-box;
@@ -516,6 +520,7 @@ p.payment-plan {
   background: #f0f2f7;
   text-align: center;
   margin: 76px 47px 44px 3px;
+  margin-right: 0;
   position: relative;
   display: block;
   -webkit-box-flex: 1;
@@ -564,7 +569,7 @@ p.pricing-plan {
   transform: translate(-50%, 0); }
   .price-tag p {
     position: absolute;
-    left: 25px;
+    left: 29px;
     top: -25px;
     font-weight: bold;
     font-size: 38px; }
@@ -572,7 +577,7 @@ p.pricing-plan {
       position: absolute;
       bottom: 30px;
       font-size: 12px;
-      left: -7px;
+      left: -10px;
       bottom: 13px; }
 
 .main-pricing-plan-container:hover .price-tag {
@@ -613,11 +618,22 @@ p.pricing-plan {
 
 .footer-options-container h2 {
   text-transform: uppercase;
-  font-size: 24px; }
+  font-size: 20px; }
 
-.section-footer-bottom {
-  background: black;
-  color: white; }
+@media screen and (max-width: 680px) {
+  .footer-flex-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; } }
+
+.footer-top-icons ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
 
 .footer-flex-nav {
   display: -webkit-box;
@@ -627,9 +643,13 @@ p.pricing-plan {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    list-style: none; }
+    list-style: none;
+    padding: 0 30px;
+    padding-left: 0; }
+    .footer-flex-nav ul li {
+      padding: 0 10px;
+      padding-left: 0; }
 
-.footer-top-icons ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
+.section-footer-bottom {
+  background: black;
+  color: white; }
